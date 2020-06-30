@@ -1,0 +1,148 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+	font-family: 'Bebas Neue', cursive;
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    background: #000;
+    overflow-y: auto;
+	-webkit-user-select: none;
+    user-select: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+nav {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100px;
+	padding: 0 10%;
+	margin: 0;
+	background: lightblue;
+}
+
+footer {
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	display: flex;
+	float: left;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	color: rgba(255,255,255,0.5);
+	background: #0d0d0d;
+}
+
+main {
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.car-info {
+	position: relative;
+	display: block;
+	float: left;
+	width: calc(100% / 3);
+	height: 300px;
+	padding: 40px;
+	margin: 0;
+}
+
+.car-name {
+	display: block;
+	float: left;
+	width: 100%;
+	font-size: 24px;
+}
+
+.car-price {
+	display: block;
+	float: left;
+	width: 100%;
+	font-size: 18px;
+}
+
+.car-actions {
+    position: absolute;
+    display: block;
+    bottom: 40px;
+    right: 40px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.car-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	cursor: pointer;
+	border: 1px solid #fff;
+}
+
+.car-button svg {
+	width: 20px;
+	height: 20px;
+}
+
+.car-button:first-child {
+	background: transparent;
+}
+
+.car-button:first-child svg {
+	fill: #fff;
+}
+
+.car-button:last-child {
+	margin: 0 0 0 15px;
+	background: #fff;
+}
