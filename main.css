@@ -42,17 +42,147 @@ body {
 }
 
 nav {
+	position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: calc(100% - 4px);
+    height: 100px;
+    padding: 0 10%;
+    margin: 0;
+    z-index: 999;
+}
+
+.logo-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: calc(100% / 3);
+	padding: 0;
+	margin: 0;
+}
+
+.logo-container img {
+	width: auto;
+	height: 70px;
+}
+
+footer {
 	position: relative;
 	display: block;
 	float: left;
 	width: 100%;
-	height: 100px;
-	padding: 0 10%;
+	height: auto;
+	padding: 0;
 	margin: 0;
-	background: lightblue;
 }
 
-footer {
+.footer-container {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+	padding: 10% 0;
+	margin: 0;
+}
+
+.footer-logo {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0 0 6% 0;
+}
+
+.footer-logo img {
+	width: auto;
+	height: 70px;
+}
+
+.footer-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0 0 6% 0;
+}
+
+.footer-box:last-child {
+	margin: 0;
+}
+
+.footer-link {
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+	display: block;
+	float: left;
+	width: auto;
+	padding: 0;
+	margin: 0 25px;
+	font-size: 14px;
+	font-weight: 400;
+    color: hsla(0,0%,100%,.5);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus,
+.footer-link:active {
+	color: #fff;
+}
+
+.footer-link:hover .footer-selector{
+	width: 100%;
+	left: 0;
+}
+
+.footer-selector {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 50%;
+	width: 0px;
+	height: 10%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background: #fff;
+	transform: translate(0,15px);
+	transition: all .3s ease;
+}
+
+.social-link {
+	position: relative;
+	display: block;
+	float: left;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.social-link svg {
+	fill: #fff;
+	width: 22px;
+	height: 22px;
+}
+
+.copyright {
 	font-family: 'Roboto', sans-serif;
 	position: relative;
 	display: flex;
@@ -66,6 +196,17 @@ footer {
 	font-size: 12px;
 	color: rgba(255,255,255,0.5);
 	background: #0d0d0d;
+}
+
+header {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 0;
+    margin: 100px 0 0 0;
+    overflow: hidden;
 }
 
 main {
@@ -90,19 +231,55 @@ main {
 	height: 300px;
 	padding: 40px;
 	margin: 0;
+	background-attachment: scroll !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.car-info:after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	padding: 0;
+	margin: 0;
+	z-index: 333;
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(255,255,255,0));
+}
+
+.car-info:before {
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	padding: 0;
+	margin: 0;
+	z-index: 333;
+	background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,0.6));
 }
 
 .car-name {
+	position: relative;
 	display: block;
 	float: left;
 	width: 100%;
+	z-index: 666;
 	font-size: 24px;
 }
 
 .car-price {
+	position: relative;
 	display: block;
 	float: left;
 	width: 100%;
+	z-index: 666;
 	font-size: 18px;
 }
 
@@ -115,6 +292,7 @@ main {
     height: auto;
     padding: 0;
     margin: 0;
+    z-index: 666;
 }
 
 .car-button {
@@ -145,4 +323,142 @@ main {
 .car-button:last-child {
 	margin: 0 0 0 15px;
 	background: #fff;
+}
+
+.car-1 {
+	background: url('img/car-1.jpg');
+}
+
+.car-2 {
+	background: url('img/car-2.jpg');
+}
+
+.car-3 {
+	background: url('img/car-3.jpg');
+}
+
+.car-4 {
+	background: url('img/car-4.jpg');
+}
+
+.car-5 {
+	background: url('img/car-5.jpg');
+}
+
+.car-6 {
+	background: url('img/car-6.jpg');
+}
+
+.car-7 {
+	background: url('img/car-7.jpg');
+}
+
+.car-8 {
+	background: url('img/car-8.jpg');
+}
+
+.car-9 {
+	background: url('img/car-9.jpg');
+}
+
+.new-info {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.new-car {
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 300px;
+	padding: 0;
+	margin: 50px 0 0 0;
+	background-attachment: scroll !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+.new-price {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    color: #000;
+    font-size: 24px;
+    background: #fff;
+    transform: translate(0, -50%);
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.search-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: calc(100% / 3);
+    height: 100%;
+    font-size: 48px;
+    background: #0d0d0d;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: calc((100% / 3) * 2);
+    height: 100%;
+}
+
+.search-input input {
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    display: block;
+    float: left;
+    width: 80%;
+    height: auto;
+    padding: 20px 0;
+    margin: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #fff;
+    font-size: 48px;
+    background: #0d0d0d;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+}
+
+.search-input input:focus {
+	border: 0;
+	outline: 0;
+	box-shadow: none;
+}
+
+.search-input input::placeholder {
+	color: #fff;
 }
