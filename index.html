@@ -10,7 +10,7 @@
     <meta name="description" content="Compra y venta de vehículos seminuevos de agencia">
     <link rel="canonical" href="https://www.automotorsgt.com">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>AutoMotors</title>
+    <title>AutoMotors - Compra y venta de vehículos seminuevos de agencia</title>
     <meta property="og:url" content="https://www.automotorsgt.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AutoMotors">
@@ -20,19 +20,123 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
 </head>
 <body>
+    <div class="preloader">
+        <div class="preloader-mask"></div>
+        <div class="preloader-mask"></div>
+        <div class="preloader-logo">
+            <img src="img/automotors-name-black.png">
+        </div>
+    </div>
     <main>
         <nav>
+            <div class="social-container">
+                <a class="social"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a class="social"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
             <div class="logo-container">
-                <img src="img/automotors.png">
+                <img src="img/automotors-white.png">
+                <div onclick="menu()" class="menu-mobile">
+                    <span id="menu_icon" class="menu-icon">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </span>
+                    <span id="close_icon" class="close-icon">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </span>
+                </div>
+            </div>
+            <div class="links-container">
+                <a class="link">¿Quiénes somos?</a>
+                <a class="link">Ubicación</a>
+                <a class="link">Carros</a>
+                <a class="link">Contáctanos</a>
             </div>
         </nav>
+        <div id="menu" class="menu">
+            <div class="menu-content">
+                <a class="menu-option">¿Quiénes somos?</a>
+                <a class="menu-option">Ubicación</a>
+                <a class="menu-option">Carros</a>
+                <a class="menu-option">Contáctanos</a>
+            </div>
+        </div>
         <header>
-
+            <div class="main-content">
+                <div class="main-car">
+                    <div class="main-image car-3"></div>
+                    <div class="main-description">
+                        <span class="main-helper">
+                            <div class="main-preview car-3"></div>
+                            <span class="main-text">
+                                <span class="main-name">BMW X5 XDRIVE 30D</span>
+                                <br>
+                                <span class="main-price">$19,490</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="main-car">
+                    <div class="main-image car-4"></div>
+                    <div class="main-description">
+                        <span class="main-helper">
+                            <div class="main-preview car-4"></div>
+                            <span class="main-text">
+                                <span class="main-name">BMW X5 XDRIVE 30D</span>
+                                <br>
+                                <span class="main-price">$19,490</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="main-car">
+                    <div class="main-image car-7"></div>
+                    <div class="main-description">
+                        <span class="main-helper">
+                            <div class="main-preview car-7"></div>
+                            <span class="main-text">
+                                <span class="main-name">BMW X5 XDRIVE 30D</span>
+                                <br>
+                                <span class="main-price">$19,490</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="container">
+            <div class="about-container">
+                <span class="about-title">Nosotros</span>
+                <div class="about-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="new-info">
+                <div class="new-car car-5">
+                    <span class="new-price">$20,000</span>
+                </div>
+                <div class="new-car car-6">
+                    <span class="new-price">$20,000</span>
+                </div>
+                <div class="new-car car-7">
+                    <span class="new-price">$20,000</span>
+                </div>
+                <div class="new-car car-8">
+                    <span class="new-price">$20,000</span>
+                </div>
+                <div class="new-car car-9">
+                    <span class="new-price">$20,000</span>
+                </div>
+            </div>
+            <div class="new-info-mobile">
                 <div class="new-car car-5">
                     <span class="new-price">$20,000</span>
                 </div>
@@ -108,12 +212,20 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <span class="location-title">Ubicación</span>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=27%20Avenida%2C%20Zona%205%2C%20Guatemala%2C%20Guatemala&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="footer-container">
                 <div class="footer-logo">
                     <img src="img/automotors.png">
                 </div>
-                <div class="footer-box">
+                <div class="footer-box footer-box-mobile">
                     <a class="footer-link">
                         ¿Quiénes somos?
                         <span class="footer-selector"></span>
@@ -149,5 +261,6 @@
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </html>
